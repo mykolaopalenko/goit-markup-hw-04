@@ -298,7 +298,8 @@ img {
   height: 20px;
   fill: var(--iconcolor);
 }
-.network-link:hover {
+.network-link:hover,
+.network-link:focus {
   background-color: var(--maincolor2);
   color: var(--logotext);
 }
@@ -306,7 +307,10 @@ img {
 .network-link:hover .network-icon {
   fill: var(--logotext);
 }
-
+.network-link:focus .network-icon {
+   fill: var(--logotext);
+ }
+ 
 .name {
   font-weight: 500;
   font-size: 16px;
@@ -346,10 +350,14 @@ img {
   fill: var(--iconcolor);
 }
 
-.company_block:hover{
+.company_block:hover,
+.company_block:focus{
  border-color: var(--maincolor2);
 }
 .company_block:hover .company_icon{
+   fill: var(--maincolor2);
+}
+.company_block:focus .company_icon{
    fill: var(--maincolor2);
 }
 .button-item:not(:last-child) {
@@ -498,12 +506,9 @@ img {
    height: 20px;
    fill:var(--logotext)
  }
- .footer-network-link:hover {
+ .footer-network-link:hover, 
+ .footer-network-link:focus {
    background-color: var(--maincolor2);
    color: var(--logotext);
  }
- 
- .footer-network-link:hover .footer-network-icon {
-   fill: var(--logotext);
- }
- 
+
