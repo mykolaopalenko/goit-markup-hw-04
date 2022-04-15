@@ -96,13 +96,11 @@ li {
   color: var(--infocolor);
   text-decoration: none;
   display: inline-flex;
+  align-items: center;
   padding: 32px 0 32px 0;
 }
 .contact-icon {
   display: block;
-  width: 16px;
-  height: 12px;
-  margin-top: 2px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -117,11 +115,12 @@ li {
   color: var(--maincolor2);
 }
 .info_icon-block {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--buttonportfolio);
   height: 120px;
   width: 270px;
-  padding: 25px 100px;
   margin-bottom: 30px;
 }
 .info-icon {
@@ -144,7 +143,10 @@ li {
     url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
+  background-size: cover;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-text {
@@ -227,9 +229,9 @@ li {
 .button:focus {
   background-color: var(--maincolor2);
   color: var(--logotext);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 .doing_list {
   display: flex;
   justify-content: space-between;
@@ -308,9 +310,9 @@ img {
   fill: var(--logotext);
 }
 .network-link:focus .network-icon {
-   fill: var(--logotext);
- }
- 
+  fill: var(--logotext);
+}
+
 .name {
   font-weight: 500;
   font-size: 16px;
@@ -326,7 +328,7 @@ img {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--infocolor);
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .company-list {
@@ -341,6 +343,7 @@ img {
   width: 170px;
   height: 92px;
   border: 1px solid var(--iconcolor);
+  border-radius: 4px;
   color: var(--iconcolor);
 }
 
@@ -351,14 +354,14 @@ img {
 }
 
 .company_block:hover,
-.company_block:focus{
- border-color: var(--maincolor2);
+.company_block:focus {
+  border-color: var(--maincolor2);
 }
-.company_block:hover .company_icon{
-   fill: var(--maincolor2);
+.company_block:hover .company_icon {
+  fill: var(--maincolor2);
 }
-.company_block:focus .company_icon{
-   fill: var(--maincolor2);
+.company_block:focus .company_icon {
+  fill: var(--maincolor2);
 }
 .button-item:not(:last-child) {
   margin-right: 8px;
@@ -392,7 +395,12 @@ img {
 .navigation-item_block {
   cursor: pointer;
 }
-.navigation-item_block:hover {
+.navigation_link {
+  display: block;
+  text-decoration: none;
+}
+.navigation_link:focus,
+.navigation_link:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .navigation-item {
@@ -406,6 +414,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  color: var(--maincolor);
 }
 .navigation_item_group {
   font-weight: 400;
@@ -466,16 +475,14 @@ img {
 }
 .content {
   display: flex;
+  align-items: baseline;
 }
 .footer_content {
   display: flex;
   flex-direction: column;
 }
 .footer_social {
-  display: inline-block;
-  width: 206px;
   margin-left: 70px;
-  margin-top: 12px;
 }
 .footer_text {
   font-weight: 700;
@@ -488,27 +495,29 @@ img {
 }
 
 .footer-network_block {
-   display: flex;
-   justify-content: space-between;
- }
- .footer-network-link {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 44px;
-   height: 44px;
-   border-radius: 50%;
-   background-color:rgba(255, 255, 255, 0.1); 
- }
- .footer-network-icon {
-   display: inline-block;
-   width: 20px;
-   height: 20px;
-   fill:var(--logotext)
- }
- .footer-network-link:hover, 
- .footer-network-link:focus {
-   background-color: var(--maincolor2);
-   color: var(--logotext);
- }
-
+  display: flex;
+  justify-content: space-between;
+}
+.footer-network-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-network-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-network-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  fill: var(--logotext);
+}
+.footer-network-link:hover,
+.footer-network-link:focus {
+  background-color: var(--maincolor2);
+  color: var(--logotext);
+}
